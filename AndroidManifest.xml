@@ -83,6 +83,8 @@
     <uses-permission
         android:name="com.android.email.permission.ACCESS_PROVIDER"/>
 
+    <uses-sdk android:minSdkVersion="14"/>
+
     <!-- Note:  Actually, android:hardwareAccelerated could be "true", but in order to switch it
          on/off in the debug screen, we have to set it "false" here and enable it at runtime.  -->
     <application
@@ -161,7 +163,7 @@
         <activity
             android:name=".activity.setup.AccountSettings"
             android:label="@string/settings_activity_title"
-            android:theme="@android:style/Theme.Holo.Light"
+            android:theme="@android:style/Theme.Holo"
             >
             <intent-filter>
                 <action
@@ -193,7 +195,7 @@
         <activity
             android:name=".activity.ShortcutPicker"
             android:enabled="false"
-            android:theme="@android:style/Theme.Holo.Light.DialogWhenLarge"
+            android:theme="@android:style/Theme.Holo.DialogWhenLarge"
             >
             <intent-filter
                 android:label="@string/account_shortcut_picker_name">
@@ -226,7 +228,8 @@
         <activity
             android:name=".activity.MessageCompose"
             android:label="@string/compose_title"
-            android:theme="@android:style/Theme.Holo.Light"
+            android:enabled="false"
+            android:theme="@android:style/Theme.Holo"
             >
             <intent-filter>
                 <action
@@ -468,7 +471,7 @@
         <activity
             android:name=".widget.WidgetConfiguration"
             android:enabled="false"
-            android:theme="@android:style/Theme.Holo.Light.DialogWhenLarge"
+            android:theme="@android:style/Theme.Holo.DialogWhenLarge"
             >
             <intent-filter
                 android:label="@string/account_shortcut_picker_name">
